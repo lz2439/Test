@@ -23,4 +23,17 @@ ssh-keygen -t ed25519 -C "你的邮箱地址"
 ### 三、使用方式
 ```git
 git clone url    #克隆后要输入yes，url在项目地址获取，克隆到本地的当前文件夹下
+git add .    #添加更新到缓冲区，.代表所有文件，有风险，建议跟文件名
+git reset .    #取消缓冲区更新
+git status    #查看缓冲区状态
+
+git commit -m test    #写更新备注，后面跟文件，同时要设置邮箱和名称
+git config --global user.email "you@example.com"    #设置邮箱
+git config --global user.name "Your Name"    #设置名称
+
+git config --global core.autocrlf false    #禁止转换换行符
+
+git pull    #将缓冲区推送到github
+
 ```
+
